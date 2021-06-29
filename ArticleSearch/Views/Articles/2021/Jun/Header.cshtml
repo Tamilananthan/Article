@@ -1,0 +1,11 @@
+@{
+    //var item = Sitecore.Context.Database.GetItem("/sitecore/content/Home/Alud/Setting/GlobalSetting");
+    var item = Sitecore.Context.Database.GetItem("{F5CC3E04-72D8-4B24-8D9F-8026494D51B0}");
+}
+
+<header>	
+	<div class="jumbotron text-white bg-primary">
+		<h1 class="display-3">@Html.Sitecore().Field("Header-Title", item)<h1>
+		<p class="lead">@Html.Sitecore().Field("Header Sub Title", item)<p>
+	</div>	
+</header>

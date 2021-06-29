@@ -1,0 +1,80 @@
+@{
+	var item = Sitecore.Context.Database.GetItem("{F5CC3E04-72D8-4B24-8D9F-8026494D51B0}");
+}
+
+@{
+	var item1 = Sitecore.Context.Database.GetItem("{AF6A94CA-1F9C-449A-92EF-1B4DA5200538}");
+}
+
+@{
+	var item2 = Sitecore.Context.Database.GetItem("{4C67E566-D359-43CA-B985-52217BBF59BE}");
+}
+
+@{
+	var item3 = Sitecore.Context.Database.GetItem("{E4B3CCCC-6BD3-4F0C-AE34-37B1AF7E9D51}");
+}
+
+@{
+	var item4 = Sitecore.Context.Database.GetItem("{49DC83E5-60F9-4EF0-AA90-311D2DCDEC81}");
+}
+
+<div class="row">
+	<div class="blog-post-card card col-lg-4">
+		@Html.Sitecore().Field("ArticleSamllImage")
+		<div class="card-body bg-light">
+			<strong class="d-inline-block mb-2 text-success">Design</strong>
+			<h3>@Html.Sitecore().Field("title") </h3>
+			<div class="mb-1 text-muted">@Html.Sitecore().Field("posteddate", new { format = "MMM\ndd,\nyyyy" })</div>	
+			<p>@Html.Sitecore().Field("ShortDescription")</p>					
+			<a href="articlesblog" target="_blank" class="btn btn-warning btn-block">@Html.Sitecore().Field("PostCardButtonText", item)</a>				
+		</div>		
+	</div>	
+
+	<div class="blog-post-card card col-lg-4">
+		@Html.Sitecore().Field("ArticleSamllImage", item1)		
+		<div class="card-body bg-light">
+			<strong class="d-inline-block mb-2 text-success">Design</strong>
+			<h3>@Html.Sitecore().Field("title", item1) </h3>
+			<div class="mb-1 text-muted">@Html.Sitecore().Field("posteddate", item1, new { format = "MMM\nd,\nyyyy" })</div>	
+			<p>@Html.Sitecore().Field("ShortDescription", item1)</p>					
+			<a href="articlesblog" target="_blank" class="btn btn-warning btn-block">@Html.Sitecore().Field("PostCardButtonText", item)</a>				
+		</div>		
+	</div>
+
+	<div class="blog-post-card card col-lg-4">
+		@Html.Sitecore().Field("ArticleSamllImage", item2)		
+		<div class="card-body bg-light">
+			<strong class="d-inline-block mb-2 text-success">Design</strong>
+			<h3>@Html.Sitecore().Field("title", item2) </h3>
+			<div class="mb-1 text-muted">@Html.Sitecore().Field("posteddate", item2, new { format = "MMM\ndd,\nyyyy" })</div>	
+			<p>@Html.Sitecore().Field("ShortDescription", item2)</p>					
+			<a href="articlesblog" target="_blank" class="btn btn-warning btn-block">@Html.Sitecore().Field("PostCardButtonText", item)</a>			
+		</div>		
+	</div>		
+</div>	
+
+<div class="row">
+	<div class="blog-post-card card col-lg-4">
+		@Html.Sitecore().Field("ArticleSamllImage", item3)		
+		<div class="card-body bg-light">
+			<strong class="d-inline-block mb-2 text-success">Design</strong>
+			<h3>@Html.Sitecore().Field("title", item3) </h3>
+			<div class="mb-1 text-muted">@Html.Sitecore().Field("posteddate", item3, new { format = "MMM\ndd,\nyyyy" })</div>	
+			<p>@Html.Sitecore().Field("ShortDescription", item3)</p>					
+			<a href="articlesblog" target="_blank" class="btn btn-warning btn-block">@Html.Sitecore().Field("PostCardButtonText", item)</a>			
+		</div>		
+	</div>
+	
+	<div class="blog-post-card card col-lg-4">
+		@Html.Sitecore().Field("ArticleSamllImage", item4)		
+		<div class="card-body bg-light">
+			<strong class="d-inline-block mb-2 text-success">Design</strong>
+			<h3>@Html.Sitecore().Field("title", item4) </h3>
+			<div class="mb-1 text-muted">@Html.Sitecore().Field("posteddate", item4, new { format = "MMM\ndd,\nyyyy" })</div>	
+			<p>@Html.Sitecore().Field("ShortDescription", item4)</p>					
+			<a href="articlesblog" target="_blank" class="btn btn-warning btn-block">@Html.Sitecore().Field("PostCardButtonText", item)</a>				
+		</div>		
+	</div>
+</div>	
+	
+
